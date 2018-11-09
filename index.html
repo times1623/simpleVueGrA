@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <title>Vue Practice MMED1012</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <main id="app">
+    <h3>{{ welcomeMessage }}</h3>
+
+    <ul>
+      <li v-for='fruit in goodFruits'>
+        <p @click='logFruits'>{{ fruit.name }} is {{ fruit.flavour }}</p>
+      </li>
+    </ul>
+
+    <!-- BIND CLASS WITH VUE  -->
+    <a 
+    :class="{ 'no-decorate' : anchorOff }"
+    :href="targetURL" 
+    target="_blank"
+    >Go to the VUE Documentation</a>
+
+    <p v-if="hazVue">
+      {{ vuemessage }}
+    </p>
+
+  </main>
+
+  <footer id="footer">
+    {{ footermessage }}
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
